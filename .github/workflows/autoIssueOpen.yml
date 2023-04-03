@@ -1,0 +1,53 @@
+name: Add Information on Issue
+
+on:
+  issues:
+    types: [opened, reopened, edited]
+    
+jobs:
+  add-info-issue:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Add Assignee on Issue
+      uses: actions-cool/issues-helper@v3
+      with:
+        actions: 'add-assignees'
+        token: ${{ secrets.GITHUB_TOKEN }}
+        issue-number: ${{ github.event.issue.number }}
+        assignees: ${{ github.actor }}
+        
+    - name: Add progress label on Issue
+      uses: actions-cool/issues-helper@v3
+      with:
+        actions: 'add-labels'
+        token: ${{ secrets.GITHUB_TOKEN }}
+        issue-number: ${{ github.event.issue.number }}
+        labels: 'To Do'
+        
+    - if: startswith(github.event.issue.title, 'feature') == true
+      name: Add feature label on Issue
+      uses: actions-cool/issues-helper@v3
+      with:
+        actions: 'add-labels'
+        token: ${{ secrets.GITHUB_TOKEN }}
+        issue-number: ${{ github.event.issue.number }}
+        labels: '✨ Feature'
+        
+    - if: startswith(github.event.issue.title, 'bug') == true
+      name: Add bug label on Issue
+      uses: actions-cool/issues-helper@v3
+      with:
+        actions: 'add-labels'
+        token: ${{ secrets.GITHUB_TOKEN }}
+        issue-number: ${{ github.event.issue.number }}
+        labels: '🐞 Bug'
+        
+    - if: startswith(github.event.issue.title, 'refactor') == true
+      name: Add refactor label on Issue
+      uses: actions-cool/issues-helper@v3
+      with:
+        actions: 'add-labels'
+        token: ${{ secrets.GITHUB_TOKEN }}
+        issue-number: ${{ github.event.issue.number }}
+        labels: '🔨 Refactor'
+       
