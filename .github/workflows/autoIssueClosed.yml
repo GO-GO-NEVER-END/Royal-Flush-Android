@@ -4,14 +4,14 @@ on:
   issues:
     types: [closed]
 
-permissions:
-  issues: read|write
-
 jobs:
   change-label:
+    permissions:
+      contents: read
+      issues: write
     runs-on: ubuntu-latest
     steps:
-    - name: Remove progress label on PR
+    - name: Remove progress label on Issue
       uses: actions-cool/issues-helper@v3
       with:
         actions: 'remove-labels'
@@ -19,7 +19,7 @@ jobs:
         issue-number: ${{ github.event.issue.number }}
         labels: 'To Do,In Progress,In Review'
         
-    - name: Add progress label on PR
+    - name: Add progress label on Issue
       uses: actions-cool/issues-helper@v3
       with:
         actions: 'add-labels'
