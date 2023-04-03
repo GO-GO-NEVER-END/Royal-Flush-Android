@@ -17,7 +17,7 @@ dependencyResolutionManagement {
 rootProject.name = "RoyalFlush"
 include(":app")
 include(":feature:feature-map")
-include(":feature:feautre-subway")
+include(":feature:feature-subway")
 include(":feature:feature-teatime")
 include(":feature:feature-more")
 include(":feature:feature-detail")
