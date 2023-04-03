@@ -4,9 +4,6 @@ on:
   pull_request:
     types: [opened, reopened, edited]
 
-permissions:
-  pull-requests: [read, write]
-
 jobs:
   add-info-pr:
     permissions:
