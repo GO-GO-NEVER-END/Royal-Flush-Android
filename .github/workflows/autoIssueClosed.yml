@@ -3,7 +3,10 @@ name: Change Progress Label on Issues - Done
 on:
   issues:
     types: [closed]
-    
+
+permissions:
+  issues: read|write
+
 jobs:
   change-label:
     runs-on: ubuntu-latest

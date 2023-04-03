@@ -3,7 +3,10 @@ name: Change Progress Label on PR
 on:
   pull_request:
     types: [closed]
-    
+
+permissions:
+  pull-requests: read|write
+
 jobs:
   change-label:
     runs-on: ubuntu-latest

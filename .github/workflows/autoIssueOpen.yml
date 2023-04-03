@@ -3,7 +3,10 @@ name: Add Information on Issue
 on:
   issues:
     types: [opened, reopened, edited]
-    
+
+permissions:
+  issues: read|write
+
 jobs:
   add-info-issue:
     runs-on: ubuntu-latest
