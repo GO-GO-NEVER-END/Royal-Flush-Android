@@ -1,21 +1,21 @@
 ✅ Test:
-  - 'domain/src/test/**/*'
-  - 'feature/**/src/test/**/*'
-  - 'feature/**/src/androidTest/**/*'
-  - 'data/**/src/test/**/*'
-  - 'data/**/src/androidTest/**/*'
+  - "domain/src/test/**/*"
+  - "feature/**/src/test/**/*"
+  - "feature/**/src/androidTest/**/*"
+  - "data/**/src/test/**/*"
+  - "data/**/src/androidTest/**/*"
 
 🖇 Chore:
-  - '**/*.gradle.kts'
-  - 'buildSrc/**/*'
-  - 'gradle/**/*'
-  - '**/AndroidManifest.xml'
+  - "**/*.gradle.kts"
+  - "buildSrc/**/*"
+  - "gradle/**/*"
+  - "**/AndroidManifest.xml"
   
 🎀 Design:
-  - 'feature/**/src/main/res/**/*'
+  - "feature/**/src/main/res/**/*"
 
 📃 Docs:
-  - 'README.md'
+  - "README.md"
   
 🌏 CI/CD:
-  - '.github/*'
+  - ".github/*"

@@ -14,43 +14,43 @@ jobs:
     - name: Add Assignee on Issue
       uses: actions-cool/issues-helper@v3
       with:
-        actions: 'add-assignees'
-        token: ${{ secrets.GITHUB_TOKEN }}
+        actions: "add-assignees"
+        token: "${{ secrets.GITHUB_TOKEN }}"
         issue-number: ${{ github.event.issue.number }}
-        assignees: ${{ github.actor }}
+        assignees: "${{ github.actor }}"
         
     - name: Add progress label on Issue
       uses: actions-cool/issues-helper@v3
       with:
-        actions: 'add-labels'
-        token: ${{ secrets.GITHUB_TOKEN }}
+        actions: "add-labels"
+        token: "${{ secrets.GITHUB_TOKEN }}"
         issue-number: ${{ github.event.issue.number }}
-        labels: 'To Do'
+        labels: "To Do"
         
-    - if: startswith(github.event.issue.title, 'feature') == true
+    - if: startswith(github.event.issue.title, "feature") == true
       name: Add feature label on Issue
       uses: actions-cool/issues-helper@v3
       with:
-        actions: 'add-labels'
-        token: ${{ secrets.GITHUB_TOKEN }}
+        actions: "add-labels"
+        token: "${{ secrets.GITHUB_TOKEN }}"
         issue-number: ${{ github.event.issue.number }}
-        labels: '✨ Feature'
+        labels: "✨ Feature"
         
-    - if: startswith(github.event.issue.title, 'bug') == true
+    - if: startswith(github.event.issue.title, "bug") == true
       name: Add bug label on Issue
       uses: actions-cool/issues-helper@v3
       with:
-        actions: 'add-labels'
-        token: ${{ secrets.GITHUB_TOKEN }}
+        actions: "add-labels"
+        token: "${{ secrets.GITHUB_TOKEN }}"
         issue-number: ${{ github.event.issue.number }}
-        labels: '🐞 Bug'
+        labels: "🐞 Bug"
         
-    - if: startswith(github.event.issue.title, 'refactor') == true
+    - if: startswith(github.event.issue.title, "refactor") == true
       name: Add refactor label on Issue
       uses: actions-cool/issues-helper@v3
       with:
-        actions: 'add-labels'
-        token: ${{ secrets.GITHUB_TOKEN }}
+        actions: "add-labels"
+        token: "${{ secrets.GITHUB_TOKEN }}"
         issue-number: ${{ github.event.issue.number }}
-        labels: '🔨 Refactor'
+        labels: "🔨 Refactor"
        
