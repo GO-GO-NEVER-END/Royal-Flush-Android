@@ -1,0 +1,55 @@
+name: Add Information on PR
+
+on:
+  pull_request:
+    types: [opened, reopened, edited]
+
+jobs:
+  add-info-pr:
+    permissions:
+      contents: read
+      pull-requests: write
+    runs-on: ubuntu-latest
+    steps:
+    - name: Add assignee on PR
+      uses: actions-cool/issues-helper@v3
+      with:
+        actions: "add-assignees"
+        token: "${{ secrets.GITHUB_TOKEN }}"
+        issue-number: ${{ github.event.number }}
+        assignees: "${{ github.actor }}"
+        
+    - name: Add progress label on PR
+      uses: actions-cool/issues-helper@v3
+      with:
+        actions: "add-labels"
+        token: "${{ secrets.GITHUB_TOKEN }}"
+        issue-number: ${{ github.event.number }}
+        labels: "In Review"
+        
+    - if: startswith(github.event.title, "feature") == true
+      name: Add feature label on PR
+      uses: actions-cool/issues-helper@v3
+      with:
+        actions: "add-labels"
+        token: "${{ secrets.GITHUB_TOKEN }}"
+        issue-number: ${{ github.event.number }}
+        labels: "✨ Feature"
+        
+    - if: startswith(github.event.title, "bug") == true
+      name: Add bug label on PR
+      uses: actions-cool/issues-helper@v3
+      with:
+        actions: "add-labels"
+        token: "${{ secrets.GITHUB_TOKEN }}"
+        issue-number: ${{ github.event.number }}
+        labels: "🐞 Bug"
+        
+    - if: startswith(github.event.title, "refactor") == true
+      name: Add refactor label on PR
+      uses: actions-cool/issues-helper@v3
+      with:
+        actions: "add-labels"
+        token: "${{ secrets.GITHUB_TOKEN }}"
+        issue-number: ${{ github.event.number }}
+        labels: "🔨 Refactor"

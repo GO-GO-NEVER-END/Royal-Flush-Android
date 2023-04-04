@@ -1,0 +1,28 @@
+name: Change Progress Label on PR
+
+on:
+  pull_request:
+    types: [closed]
+
+jobs:
+  change-label:
+    permissions:
+      contents: read
+      pull-requests: write
+    runs-on: ubuntu-latest
+    steps:
+    - name: Remove progress label on PR
+      uses: actions-cool/issues-helper@v3
+      with:
+        actions: "remove-labels"
+        token: "${{ secrets.GITHUB_TOKEN }}"
+        issue-number: ${{ github.event.number }}
+        labels: "In Review"
+        
+    - name: Add progress label on PR
+      uses: actions-cool/issues-helper@v3
+      with:
+        actions: "add-labels"
+        token: "${{ secrets.GITHUB_TOKEN }}"
+        issue-number: ${{ github.event.number }}
+        labels: "Done"
