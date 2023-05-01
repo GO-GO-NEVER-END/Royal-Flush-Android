@@ -1,5 +1,11 @@
 @file:Suppress("UnstableApiUsage")
 
+include(":feature:feature-home")
+
+
+include(":feature:feature-mypage")
+
+
 pluginManagement {
     includeBuild("build-logic")
     repositories {
@@ -22,8 +28,6 @@ include(":app")
 include(":feature:feature-common")
 include(":feature:feature-detail")
 include(":feature:feature-login")
-include(":feature:feature-home")
-include(":feature:feature-mypage")
 include(":feature:feature-teatime")
 include(":feature:feature-subway")
 include(":domain")

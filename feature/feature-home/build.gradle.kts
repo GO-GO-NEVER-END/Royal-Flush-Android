@@ -1,10 +1,10 @@
 plugins {
     id("ggne.android.feature")
-    alias(libs.plugins.kotlin.android)
+    id("org.jetbrains.kotlin.android")
 }
 
 android {
-    namespace = "com.ggne.feature_map"
+    namespace = "com.ggne.feature_home"
 }
 
 dependencies {

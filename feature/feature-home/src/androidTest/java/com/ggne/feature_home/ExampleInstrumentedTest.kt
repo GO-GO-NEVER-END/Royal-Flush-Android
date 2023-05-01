@@ -19,6 +19,6 @@ class ExampleInstrumentedTest {
     fun useAppContext() {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
-        assertEquals("com.ggne.feature_map.test", appContext.packageName)
+        assertEquals("com.ggne.feature_home.test", appContext.packageName)
     }
 }
