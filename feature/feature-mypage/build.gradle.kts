@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "com.ggne.feature_teatime"
+    namespace = "com.ggne.feature_more"
 }
 
 dependencies {

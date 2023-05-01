@@ -1,5 +1,6 @@
 plugins {
     id("ggne.android.feature")
+    alias(libs.plugins.kotlin.android)
 }
 
 android {
