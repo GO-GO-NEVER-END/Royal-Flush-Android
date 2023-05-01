@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">RoyalFlush</string>
+
+    <string name="home">홈</string>
+    <string name="subway">지하철</string>
+    <string name="teatime">티타임</string>
+    <string name="mypage">마이페이지</string>
 </resources>
