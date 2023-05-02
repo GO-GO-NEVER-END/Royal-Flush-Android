@@ -64,7 +64,6 @@ hilt-gradle-plugin = { group = "com.google.dagger", name = "hilt-android-gradle-
 [bundles]
 
 navigation = ["androidx-navigation-fragment-ktx", "androidx-navigation-ui-ktx"]
-android-base = ["androidx-livedata-ktx"]
 android-feature-base = ["androidx-core-ktx", "androidx-appcompat", "androidx-viewmodel-ktx", "androidx-lifecycle-ktx", "android-material"]
 android-data-base = []
 test = ["junit", "androidx-test-junit"]

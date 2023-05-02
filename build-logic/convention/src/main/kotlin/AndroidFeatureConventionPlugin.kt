@@ -15,7 +15,6 @@ class AndroidFeatureConventionPlugin : Plugin<Project> {
             val libs = findVersionCatalog()
 
             dependencies {
-                implementation(libs.findBundle("android-base"))
                 implementation(libs.findBundle("android-feature-base"))
             }
         }

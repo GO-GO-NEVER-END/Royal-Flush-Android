@@ -15,7 +15,6 @@ class AndroidDataConventionPlugin: Plugin<Project> {
             val libs = findVersionCatalog()
 
             dependencies {
-                implementation(libs.findBundle("android-base"))
                 implementation(libs.findBundle("android-data-base"))
             }
         }
