@@ -1,5 +1,6 @@
 plugins {
     id("ggne.android.feature")
+    id(libs.plugins.navigation.safeargs.get().pluginId)
     alias(libs.plugins.kotlin.android)
 }
 
