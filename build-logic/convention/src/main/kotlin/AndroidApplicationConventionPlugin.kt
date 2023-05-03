@@ -20,7 +20,6 @@ class AndroidApplicationConventionPlugin : Plugin<Project> {
             val libs = findVersionCatalog()
             dependencies {
                 implementation(libs.findBundle("navigation"))
-                implementation(libs.findBundle("android-feature-base"))
             }
 
             extensions.configure<ApplicationExtension> {

@@ -1,5 +1,6 @@
 @file:Suppress("UnstableApiUsage")
 @Suppress("DSL_SCOPE_VIOLATION")
+
 plugins {
     id("ggne.android.application")
     id("ggne.android.hilt")
@@ -18,7 +19,7 @@ android {
 }
 
 dependencies {
-    // implementation(libs.androidx.fragment.ktx)
+    implementation(libs.androidx.appcompat)
     implementation(project(":feature:feature-home"))
     implementation(project(":feature:feature-mypage"))
     implementation(project(":feature:feature-subway"))

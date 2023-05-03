@@ -9,16 +9,15 @@ class AndroidHiltConventionPlugin: Plugin<Project> {
     override fun apply(target: Project) {
         with(target) {
             with(pluginManager) {
-                apply("kotlin-kapt")
                 apply("dagger.hilt.android.plugin")
+                apply("kotlin-kapt")
             }
 
             val libs = findVersionCatalog()
 
             dependencies {
-                implementation(libs.findLibrary("dagger-hilt-android"))
-                kapt(libs.findLibrary("dagger-hilt-android-compiler"))
-                implementation(libs.findLibrary("androidx-hilt-navigation-fragment"))
+                implementation(libs.findLibrary("hilt-android"))
+                kapt(libs.findLibrary("hilt-compiler"))
             }
 
             kapt {
