@@ -3,11 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_home"
-    app:startDestination="@id/homeFragment">
+    app:startDestination="@id/fragment_home">
 
     <fragment
-        android:id="@+id/homeFragment"
+        android:id="@+id/fragment_home"
         android:name="com.ggne.feature_home.HomeFragment"
-        android:label="fragment_home"
+        android:label="홈"
         tools:layout="@layout/fragment_home" />
 </navigation>

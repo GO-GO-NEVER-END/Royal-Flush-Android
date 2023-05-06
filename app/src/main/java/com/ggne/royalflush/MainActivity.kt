@@ -20,7 +20,14 @@ class MainActivity : AppCompatActivity() {
         navHostFragment.navController
     }
     private val appBarConfiguration by lazy {
-        AppBarConfiguration(navController.graph)
+        AppBarConfiguration(
+            setOf(
+                com.ggne.feature_home.R.id.fragment_home,
+                com.ggne.feature_subway.R.id.fragment_subway_search,
+                com.ggne.feature_teatime.R.id.fragment_teatime,
+                com.ggne.feature_mypage.R.id.fragment_mypage
+            )
+        )
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
