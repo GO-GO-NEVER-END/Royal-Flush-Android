@@ -11,12 +11,13 @@ androidx-lifecycle = "2.5.1"
 android-material = "1.8.0"
 
 # DI
-dagger = "2.44.2"
+hilt = "2.44.2"
 
 # Gradle
 android-gradle = "7.4.1"
 
 # Kotlin
+fragment-ktx = "1.5.7"
 kotlin = "1.8.0"
 ksp = "1.8.0-1.0.9"
 
@@ -29,12 +30,12 @@ espresso-core = "3.5.1"
 # Navigation
 androidx-navigation-fragment-ktx = { module = "androidx.navigation:navigation-fragment-ktx", version.ref = "androidx-navigation" }
 androidx-navigation-ui-ktx = { module = "androidx.navigation:navigation-ui-ktx", version.ref = "androidx-navigation" }
-androidx-hilt-navigation-fragment = { module = "androidx.hilt:hilt-navigation-fragment", version = "1.0.0" }
 androidx-navigation-safeargs = { module = "androidx.navigation:navigation-safe-args-gradle-plugin", version.ref = "androidx-navigation" }
 
 # Android
 androidx-core-ktx = { module = "androidx.core:core-ktx", version.ref = "androidx-core" }
 androidx-appcompat = { module = "androidx.appcompat:appcompat", version.ref = "androidx-appcompat" }
+androidx-fragment-ktx = { module = "androidx.fragment:fragment-ktx", version.ref = "fragment-ktx" }
 androidx-constraintlayout = { module = "androidx.constraintlayout:constraintlayout", version.ref = "androidx-constraintlayout" }
 
 # Theme
@@ -43,11 +44,10 @@ android-material = { module = "com.google.android.material:material", version.re
 # Android Lifecycle
 androidx-viewmodel-ktx = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "androidx-lifecycle" }
 androidx-lifecycle-ktx = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "androidx-lifecycle" }
-androidx-livedata-ktx = { module = "androidx.lifecycle:lifecycle-livedata-ktx", version.ref = "androidx-lifecycle" }
 
 # Hilt
-dagger-hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "dagger" }
-dagger-hilt-android-compiler = { module = "com.google.dagger:hilt-compiler", version.ref = "dagger" }
+hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt" }
+hilt-compiler = { group = "com.google.dagger", name = "hilt-compiler", version.ref = "hilt" }
 
 # Test
 junit = { module = "junit:junit", version.ref = "junit" }
@@ -57,12 +57,11 @@ androidx-test-espresso = { module = "androidx.test.espresso:espresso-core", vers
 # Plugin
 android-gradle-plugin = { group = "com.android.tools.build", name = "gradle", version.ref = "android-gradle" }
 kotlin-gradle-plugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
-hilt-gradle-plugin = { group = "com.google.dagger", name = "hilt-android-gradle-plugin", version.ref = "dagger" }
+hilt-gradle-plugin = { group = "com.google.dagger", name = "hilt-android-gradle-plugin", version.ref = "hilt" }
 
 [bundles]
 
-navigation = ["androidx-navigation-fragment-ktx", "androidx-navigation-ui-ktx", "androidx-navigation-safeargs"]
-android-base = ["androidx-livedata-ktx"]
+navigation = ["androidx-navigation-fragment-ktx", "androidx-navigation-ui-ktx"]
 android-feature-base = ["androidx-core-ktx", "androidx-appcompat", "androidx-viewmodel-ktx", "androidx-lifecycle-ktx", "android-material"]
 android-data-base = []
 test = ["junit", "androidx-test-junit"]
@@ -71,9 +70,10 @@ test-android = ["junit", "androidx-test-junit", "androidx-test-espresso"]
 [plugins]
 
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
-hilt = { id = "com.google.dagger.hilt.android", version.ref = "dagger" }
+hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
 kotlin-kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin" }
 android-application = { id = "com.android.application", version.ref = "android-gradle" }
 android-library = { id = "com.android.library", version.ref = "android-gradle" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+navigation-safeargs = { id = "androidx.navigation.safeargs.kotlin" }

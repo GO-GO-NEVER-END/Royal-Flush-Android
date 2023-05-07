@@ -1,3 +1,5 @@
+@Suppress("DSL_SCOPE_VIOLATION")
+
 plugins {
     id("ggne.android.feature")
 }
