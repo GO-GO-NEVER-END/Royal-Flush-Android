@@ -7,19 +7,25 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import com.ggne.feature_common.R
 import com.ggne.feature_common.databinding.RoyalFlushEditTextBinding
 
-class RoyalFlushEditText(context: Context, attrs: AttributeSet): ConstraintLayout(context, attrs) {
+class RoyalFlushEditText(context: Context, attrs: AttributeSet) : ConstraintLayout(context, attrs) {
 
-    private val binding = RoyalFlushEditTextBinding.inflate(LayoutInflater.from(context), this, true)
+    private val binding =
+        RoyalFlushEditTextBinding.inflate(LayoutInflater.from(context), this, true)
 
     init {
 
         context.theme.obtainStyledAttributes(
             attrs,
             R.styleable.RoyalFlushEditText,
-            0, 0
+            0,
+            0,
         ).apply {
             try {
-                getResourceId(R.styleable.RoyalFlushEditText_startIcon, EMPTY_RESOURCE).let { resource ->
+
+                getResourceId(
+                    R.styleable.RoyalFlushEditText_startIcon,
+                    EMPTY_RESOURCE,
+                ).let { resource ->
                     if (resource == EMPTY_RESOURCE) {
                         binding.startIc.visibility = GONE
                     } else {
@@ -27,12 +33,19 @@ class RoyalFlushEditText(context: Context, attrs: AttributeSet): ConstraintLayou
                     }
                 }
 
-                getResourceId(R.styleable.RoyalFlushEditText_endIcon, EMPTY_RESOURCE).let { resource ->
+                getResourceId(
+                    R.styleable.RoyalFlushEditText_endIcon,
+                    EMPTY_RESOURCE,
+                ).let { resource ->
                     if (resource == EMPTY_RESOURCE) {
                         binding.endIc.visibility = GONE
                     } else {
                         binding.endIc.setImageResource(resource)
                     }
+                }
+
+                getString(R.styleable.RoyalFlushEditText_royalFlushEditTextHint).let { hint ->
+                    binding.et.hint = hint
                 }
 
             } finally {

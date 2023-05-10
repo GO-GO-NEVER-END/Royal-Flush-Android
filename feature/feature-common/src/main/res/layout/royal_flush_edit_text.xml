@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="60dp"
     android:paddingHorizontal="18dp"
     android:paddingVertical="14dp"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:background="@drawable/royal_flush_edit_text_background">
 
     <ImageView
@@ -13,25 +13,26 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:paddingEnd="4dp"
+        app:layout_constraintBottom_toBottomOf="@id/et"
         app:layout_constraintDimensionRatio="1:1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/et"
-        app:layout_constraintBottom_toBottomOf="@id/et"
-        android:contentDescription="@string/start_ic" />
+        android:contentDescription="@string/start_ic"/>
 
     <EditText
         android:id="@+id/et"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@null"
-        android:textSize="14sp"
-        android:maxLines="1"
-        android:inputType="text"
-        app:layout_constraintStart_toEndOf="@id/start_ic"
-        app:layout_constraintEnd_toStartOf="@id/end_ic"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
         android:autofillHints="yes"
+        android:background="@null"
+        android:gravity="center_vertical"
+        android:inputType="text"
+        android:maxLines="1"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/end_ic"
+        app:layout_constraintStart_toEndOf="@id/start_ic"
+        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="LabelFor" />
 
     <ImageView
@@ -39,10 +40,10 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:paddingStart="4dp"
+        app:layout_constraintBottom_toBottomOf="@id/et"
         app:layout_constraintDimensionRatio="1:1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/et"
-        app:layout_constraintBottom_toBottomOf="@id/et"
-        android:contentDescription="@string/start_ic" />
+        android:contentDescription="@string/end_ic"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
