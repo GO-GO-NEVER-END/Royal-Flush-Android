@@ -19,13 +19,22 @@ class RoyalFlushEditText(context: Context, attrs: AttributeSet): ConstraintLayou
             0, 0
         ).apply {
             try {
-                getResourceId(R.styleable.RoyalFlushEditText_StartIcon, EMPTY_RESOURCE).let { resource ->
+                getResourceId(R.styleable.RoyalFlushEditText_startIcon, EMPTY_RESOURCE).let { resource ->
                     if (resource == EMPTY_RESOURCE) {
                         binding.startIc.visibility = GONE
                     } else {
                         binding.startIc.setImageResource(resource)
                     }
                 }
+
+                getResourceId(R.styleable.RoyalFlushEditText_endIcon, EMPTY_RESOURCE).let { resource ->
+                    if (resource == EMPTY_RESOURCE) {
+                        binding.endIc.visibility = GONE
+                    } else {
+                        binding.endIc.setImageResource(resource)
+                    }
+                }
+
             } finally {
                 recycle()
             }

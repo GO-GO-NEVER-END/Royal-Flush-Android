@@ -28,10 +28,21 @@
         android:maxLines="1"
         android:inputType="text"
         app:layout_constraintStart_toEndOf="@id/start_ic"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/end_ic"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         android:autofillHints="yes"
         tools:ignore="LabelFor" />
+
+    <ImageView
+        android:id="@+id/end_ic"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:paddingStart="4dp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/et"
+        app:layout_constraintBottom_toBottomOf="@id/et"
+        android:contentDescription="@string/start_ic" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

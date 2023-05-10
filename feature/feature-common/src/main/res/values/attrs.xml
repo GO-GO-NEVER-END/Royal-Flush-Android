@@ -2,5 +2,6 @@
 <resources>
     <declare-styleable name="RoyalFlushEditText">
         <attr name="startIcon" format="reference"/>
+        <attr name="endIcon" format="reference"/>
     </declare-styleable>
 </resources>
