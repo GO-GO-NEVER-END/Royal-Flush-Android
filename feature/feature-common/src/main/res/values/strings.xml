@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="start_ic">시작 아이콘</string>
+    <string name="end_ic">끝 아이콘</string>
+    <string name="text_counter_format">%d/%d</string>
+    <string name="can_use_nickname">사용 가능한 닉네임입니다.</string>
+</resources>

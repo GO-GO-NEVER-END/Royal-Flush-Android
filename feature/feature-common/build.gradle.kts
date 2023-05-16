@@ -1,3 +1,5 @@
+@file:Suppress("UnstableApiUsage")
+
 @Suppress("DSL_SCOPE_VIOLATION")
 
 plugins {
@@ -6,6 +8,9 @@ plugins {
 
 android {
     namespace = "com.ggne.feature_common"
+    buildFeatures {
+        viewBinding = true
+    }
 }
 
 dependencies {

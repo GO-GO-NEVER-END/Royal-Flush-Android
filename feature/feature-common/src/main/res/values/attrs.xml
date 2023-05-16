@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="RoyalFlushIconEditText">
+        <attr name="startIcon" format="reference" />
+        <attr name="endIcon" format="reference" />
+        <attr name="royalFlushIconEditTextHint" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="RoyalFlushVerificationEditText">
+        <attr name="isCounterVisible" format="boolean" />
+        <attr name="isVerificationVisible" format="boolean" />
+        <attr name="verificationText" format="string" />
+        <attr name="maxLength" format="integer" />
+        <attr name="royalFlushVerificationEditTextHint" format="string" />
+    </declare-styleable>
+</resources>
